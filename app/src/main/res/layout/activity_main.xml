@@ -11,32 +11,33 @@
         android:id="@+id/cabeca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginBottom="9dp"
         android:text="O"
         android:textSize="42sp"
-        app:layout_constraintEnd_toStartOf="@+id/check"
-        app:layout_constraintTop_toBottomOf="@+id/check" />
+        app:layout_constraintBottom_toTopOf="@+id/bracoE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/corpo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="|"
         android:textSize="52sp"
-        app:layout_constraintStart_toStartOf="@+id/cabeca"
-        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+        app:layout_constraintBottom_toTopOf="@+id/pernaE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/pernaE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:text="/"
         android:textSize="42sp"
         app:layout_constraintEnd_toStartOf="@+id/corpo"
-        app:layout_constraintTop_toBottomOf="@+id/corpo" />
+        app:layout_constraintTop_toBottomOf="@+id/bracoE" />
 
     <TextView
         android:id="@+id/pernaDD"
@@ -52,54 +53,53 @@
         android:id="@+id/bracoE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="151dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="151dp"
         android:text="/"
         android:textSize="32sp"
-        app:layout_constraintEnd_toStartOf="@+id/pernaE"
-        app:layout_constraintStart_toStartOf="@+id/pernaE"
-        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="@+id/pernaE"
+        app:layout_constraintTop_toBottomOf="@+id/hifens" />
 
     <TextView
         android:id="@+id/bracoDD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:text="\"
         android:textSize="32sp"
-        app:layout_constraintStart_toStartOf="@+id/pernaDD"
-        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+        app:layout_constraintBottom_toTopOf="@+id/pernaDD"
+        app:layout_constraintStart_toEndOf="@+id/pernaDD" />
 
     <TextView
         android:id="@+id/hifens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="23dp"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeJogador" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="14dp"
         android:textColor="@android:color/black"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/reset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/pernaE" />
 
     <EditText
         android:id="@+id/input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginStart="89dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:maxLength="1"
@@ -112,7 +112,7 @@
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="67dp"
         android:layout_marginTop="8dp"
         android:text="Verificar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,7 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
+        android:layout_width="157dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="23dp"
         android:layout_marginEnd="8dp"
@@ -131,5 +131,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/nomeJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

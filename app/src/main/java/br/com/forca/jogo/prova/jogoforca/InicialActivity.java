@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class InicialActivity extends AppCompatActivity {
     static private Button startAudio;
     static private Button stopAudio;
     static private ImageView foto;
+    static private EditText inputName;
     String AudioSavePathInDevice = null;
     String RandomAudioFileName = "ABCDEFGHIJKLMNOP";
     Random random;
@@ -59,6 +61,7 @@ public class InicialActivity extends AppCompatActivity {
         foto = (ImageView) findViewById(R.id.fotinhoMarota);
         startAudio = (Button) findViewById(R.id.startAudio);
         stopAudio = (Button) findViewById(R.id.stopAudio);
+        inputName = (EditText) findViewById(R.id.inputName);
 
         random = new Random();
 
@@ -159,6 +162,8 @@ public class InicialActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
+//                Bundle extras = i.getExtras();
+//                extras.putString("NOMEJOGADOR", inputName.getText().toString());
                 startActivity(i);
             }
         });

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     static private TextView gameResult;
     static private Button reset;
     static private ArrayList<TextView> desenho;
+    static private TextView nomeJogador;
 
 
     public String setWord(String word){
@@ -97,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
         final EditText inputChar = (EditText) findViewById(R.id.input);
         Button check = (Button) findViewById(R.id.check);
         reset = (Button) findViewById(R.id.reset);
+        nomeJogador = (TextView) findViewById(R.id.nomeJogador);
+
+//        Bundle extra = new Bundle();
+//
+//        nomeJogador.setText(extra.getString("NOMEJOGADOR"));
 
         hifens.setText(setWord(this.palavra));
 
