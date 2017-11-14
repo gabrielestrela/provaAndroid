@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.forca.jogo.prova.jogoforca.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/cabeca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="18dp"
+        android:text="O"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toStartOf="@+id/check"
+        app:layout_constraintTop_toBottomOf="@+id/check" />
+
+    <TextView
+        android:id="@+id/corpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="|"
+        android:textSize="52sp"
+        app:layout_constraintStart_toStartOf="@+id/cabeca"
+        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+
+    <TextView
+        android:id="@+id/pernaE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="/"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toStartOf="@+id/corpo"
+        app:layout_constraintTop_toBottomOf="@+id/corpo" />
+
+    <TextView
+        android:id="@+id/pernaDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="\"
+        android:textSize="42sp"
+        app:layout_constraintStart_toEndOf="@+id/corpo"
+        app:layout_constraintTop_toBottomOf="@+id/corpo" />
+
+    <TextView
+        android:id="@+id/bracoE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="/"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/pernaE"
+        app:layout_constraintStart_toStartOf="@+id/pernaE"
+        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+
+    <TextView
+        android:id="@+id/bracoDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp"
+        android:text="\"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/pernaDD"
+        app:layout_constraintTop_toBottomOf="@+id/cabeca" />
+
+    <TextView
+        android:id="@+id/hifens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="33dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginStart="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cabeca"
+        app:layout_constraintEnd_toStartOf="@+id/check"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginTop="8dp"
+        android:text="Verificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input"
+        app:layout_constraintTop_toBottomOf="@+id/hifens" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Jogar Novamente"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
